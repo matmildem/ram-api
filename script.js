@@ -1,6 +1,7 @@
 const pageInput = document.getElementById("pageInput")
 const searchbtn = document.getElementById("searchbtn")
 const resultsDiv = document.getElementById("results")
+//const passbtn = document.getElementById("passbtn")
 
 async function fetchCharacters(page){
     resultsDiv.innerHTML = "<p>carregando...</p>"
@@ -37,8 +38,13 @@ searchbtn.addEventListener("click",()=>{
     if(page){
         fetchCharacters(page)
      }else{
-        resultsDiv.innerHTML = "<p>digite um número de página "
+        resultsDiv.innerHTML = "<p>digite um número de página </p>"
      }
 })
+//passbtn.addEventListener("click",
+ //  if (page){
+      //   fetchCharacters(page)
+ //   }
+//})
 
 fetchCharacters(1)
